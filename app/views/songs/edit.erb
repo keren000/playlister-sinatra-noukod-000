@@ -4,9 +4,13 @@
   <input id="hidden" type="hidden" name="_method" value="patch">
 <p>
   <label for="name">Song Name:</label><input type="text" id="Name" name="song[name]" value="<%= @song.name %>"><br>
+</p>
 
+<p>
   <label for="artist">Artist Name:</label><input type="text" id="Artist Name" name="song[artist]" value="<%= @song.artist.name %>"><br>
+</p>
 
+<p>
   <label for="genres">Genres:</label><br>
 
   <% Genre.all.each do |genre| %>
@@ -16,6 +20,7 @@
 
     <br>
   <% end %>
+</p>
 
   <br>
   <input type="submit" value="Save">
